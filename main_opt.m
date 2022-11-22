@@ -62,7 +62,7 @@ fprintf('Compilation took %f minutes.\n', toc(t1)/60);
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Link the NLP problem to a NLP solver
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Log all activities in logger
 if exist('log.yaml','file')
     delete('log.yaml');
@@ -74,7 +74,7 @@ diary log.txt;
 options.max_iter = 300;
 solver = IpoptApplication(nlp,options);
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Run the optimization
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 t1 = tic;
@@ -117,7 +117,9 @@ num_steps = 10;
 logger_sim = sim_frost(behavior, params, num_steps);
 conGUI = Plot.LoadAnimator(behavior, logger_sim);
 
-%% Plotting
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Make Plots
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Plot.JointPosition(logger_sim)
 Plot.JointVelocities(logger_sim)
 Plot.JointTorque(logger_sim)
