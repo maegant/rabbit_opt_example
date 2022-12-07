@@ -1,4 +1,4 @@
-function [str] = yaml_write_file(filePath, domain, info, rowOnly)
+function [str] = info_yaml_write_file(filePath, domain, info, rowOnly)
 %yaml_write_file Write 'obj' as YAML document to given 'filename', returns
 %string representation.
 %  rowOnly - if a numeric or cell array is a vector (size along one
