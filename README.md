@@ -9,8 +9,10 @@ This repository is intended to provide a tutorial on how to set up a (P)HZD gait
 2. Install FROST following the installation instructions provided [here](https://ayonga.github.io/frost-dev/pages/installation.html)
 3. This tutorial assumes that the FROST repository is set to the master branch with the following commit
     ```
+    git clone https://github.com/ayonga/frost-dev.git
+    cd frost-dev
     git checkout master
-    git cherry-pick 5e17cf8d9d2f2c239c3589d0a8bdb8ea49f09d53
+    git reset --hard 5e17cf8d9d2f2c239c3589d0a8bdb8ea49f09d53
     ```
 - Note that you may need to add the following line to your .bashrc in order to successfully use the later FROST commits
     ```
